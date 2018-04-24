@@ -1,0 +1,521 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    font-family: 'Coda', cursive;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+#deck {
+    width: 660px;
+    min-height: 680px;
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+  .card {
+    height: 125px;
+    width: 125px;
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+ 
+
+.open {
+    height: 125px;
+    width: 125px;
+    transform: rotateY( 180deg );
+    background: #02b3e4;
+    cursor: default;
+     border-radius: 8px;
+     justify-content: center;
+    align-items: center;
+     display: flex;
+    }
+
+ .show {
+    font-size: 33px;
+}
+
+
+ .match {
+   
+    cursor: default;
+    border-radius: 8px;
+     
+    
+    background: #02ccba;
+    
+}
+.close {
+    height: 125px;
+    width: 125px;
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+    text-align: left;
+    width: 345px;
+    margin-bottom: 10px;
+}
+
+ .score-panel #stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin-left: -30%;
+    margin-right: 2%; 
+}
+
+.score-panel #stars li {
+    list-style: none;
+    display: inline-block;
+}
+.score-panel .moves
+{
+    display: inline-block;
+
+    margin-right: 30%; 
+}
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 5%;
+    
+}
+.score-panel .timer {
+    display: inline-block;
+}
+
+#win
+{
+    text-align: center;
+}
+#message
+{
+    text-align: center;
+    list-style: none;
+    
+}
+.score {
+    text-align: center;
+    
+    margin-left: 0%;
+    margin-bottom: -2%;
+}
+.score #star
+{
+
+    padding: 0;
+    text-align: center;
+    display: inline-block;
+  
+
+}
+.score #star li {
+    text-align: center;
+    list-style: none;
+    display: inline-block;
+}
+@media only screen and (max-width: 740px) and (min-width: 451px)
+{
+    #deck
+    {
+        max-width: 430px;
+        min-height: auto;
+    }
+    .card
+    {
+        width:80px;
+        height: 80px;
+        margin-bottom: 8%;
+
+    }
+    .score-panel
+    {
+        display: block;
+        text-align: center;
+        width: 350px;
+        padding-bottom: 0px;
+    }
+    .score-panel .moves
+{
+    display: inline-block;
+
+    margin-right: 10%; 
+}
+#win
+{
+    text-align: center;
+}
+#message
+{
+    text-align: center;
+    list-style: none;
+    
+}
+.score {
+    text-align: center;
+    
+    margin-left: 0%;
+    margin-bottom: -2%;
+}
+.score #star
+{
+
+    padding: 0;
+    text-align: center;
+    display: inline-block;
+  
+
+}
+.score #star li {
+    text-align: center;
+    list-style: none;
+    display: inline-block;
+}
+}
+@media only screen and (max-width: 450px) and  (min-width: 325px)
+{
+    #deck
+    {
+        max-width: 300px;
+        min-height: 300px;
+    }
+    .card
+    {
+        width: 50px;
+        height: 50px;
+        
+        
+    }
+    .score-panel
+    {
+        display: block;
+        text-align: center;
+        width: 250px;
+        padding-bottom: 0px;
+        font-size: 12px;
+    }
+    .score-panel #stars li {
+    list-style: none;
+    display: inline-block;
+}
+.score-panel .moves
+{
+    display: inline-block;
+
+    margin-right: 15%; 
+}
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 5%;
+    
+}
+.score-panel .timer {
+    display: inline-block;
+}
+}
+@media only screen and (max-width: 324px) and (min-width: 251px)
+{
+    #deck
+    {
+        max-width: 220px;
+        min-height: auto;
+    }
+    .card
+    {
+        width: 35px;
+        height: 35px;
+        margin-bottom: 8%;
+        
+    }
+    .score-panel
+    {
+        display: block;
+        text-align: center;
+        width: 165px;
+        padding-bottom: 0px;
+        font-size: 11px;
+    }
+    .score-panel .moves
+{
+    display: inline-block;
+
+    margin-right: 10%; 
+}
+    .score-panel .timer {
+    display: inline-block;
+   
+}
+}
+@media only screen and (max-width: 250px) and (min-width: 230px) 
+{
+    #deck
+    {
+        max-width: 170px;
+        min-height: auto;
+    }
+    .card
+    {
+        width: 22px;
+        height: 22px;
+        margin-bottom: 8%;
+        
+    }
+    .score-panel
+    {
+        display: block;
+        text-align: center;
+        width: 150px;
+        padding-bottom: 0px;
+        font-size: 10px;
+    }
+    .score-panel .timer {
+    display: inline-block;
+    
+}
+ .score-panel .moves
+{
+    display: inline-block;
+
+    margin-right: 10%; 
+}
+    .show {
+    font-size: 17px;
+}
+}
+@media only screen and (max-width: 229px) and (min-width: 187px)
+{
+    #deck
+    {
+        max-width: 60%;
+        min-height: auto;
+        padding: 2px;
+    }
+    .card
+    {
+        width: 27px;
+        height: 26px;
+        margin-bottom: 8%;
+        
+    }
+    .score-panel
+    {
+        display: block;
+        text-align: center;
+        width: 80px;
+        padding-bottom: 0px;
+        font-size: 10px;
+
+    }
+    .score-panel .timer {
+    display: inline-block;
+    text-align: center;
+    
+}
+ .score-panel .moves
+{
+    display: inline-block;
+text-align: center;
+    margin-left: 20%;
+}
+    .show {
+    font-size: 13px;
+}
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+.score-panel #stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin-bottom: 5%; 
+}
+.score-panel .restart {
+    
+    cursor: pointer;
+    display: inline-block;
+   margin-right:45%;  
+    margin-top: -5%;
+}
+}
+@media only screen and (max-width: 186px) and (min-width: 155px)
+{
+    #deck
+    {
+        max-width: 70%;
+        min-height: auto;
+        padding: 2px;
+    }
+    .card
+    {
+        width: 26px;
+        height: 26px;
+        margin-bottom: 8%;
+        
+    }
+    .score-panel
+    {
+        display: block;
+        text-align: center;
+        width: 80px;
+        padding-bottom: 0px;
+        font-size: 10px;
+
+    }
+    .score-panel .timer {
+    display: inline-block;
+    text-align: center;
+    margin-left: 17%;
+    
+}
+ .score-panel .moves
+{
+    display: inline-block;
+text-align: center;
+    margin-left: 20%;
+}
+    .show {
+    font-size: 13px;
+}
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 13px;
+}
+.score-panel #stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin-bottom: 5%; 
+}
+.score-panel .restart {
+    
+    cursor: pointer;
+    display: inline-block;
+   margin-right:45%;  
+    margin-top: -5%;
+}
+}
+@media only screen and (max-width: 154px)
+{
+    #deck
+    {
+        max-width: 90%;
+        min-height: auto;
+        padding: 2px;
+    }
+    .card
+    {
+        width: 27px;
+        height: 27px;
+        margin-bottom: 8%;
+        
+    
+    }
+    .score-panel
+    {
+        display: block;
+        text-align: center;
+        width: 80px;
+        padding-bottom: 0px;
+        font-size: 10px;
+
+    }
+    .score-panel .timer {
+    display: inline-block;
+    text-align: center;
+    margin-left: 11%;
+    
+}
+ .score-panel .moves
+{
+    display: inline-block;
+text-align: center;
+    margin-left: 20%;
+}
+    .show {
+    font-size: 13px;
+}
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 13px;
+}
+.score-panel #stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin-bottom: 5%; 
+}
+.score-panel .restart {
+    
+    cursor: pointer;
+    display: inline-block;
+   margin-right:45%;  
+    margin-top: -5%;
+}
+}
