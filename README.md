@@ -1,6 +1,6 @@
 # Memory Game
 
-This game is based upon card matching where player has to match all the cards to win. 
+This game is based upon card matching where player has to match all the cards to win . 
 
 ## Features
 
